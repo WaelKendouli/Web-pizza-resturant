@@ -1,20 +1,16 @@
 
 :root {
-    --bg_container : hsla(240, 91%, 13%, 0.5);
+    --bg_container : hsla(240, 3%, 7%, 0.715);
     --white : #fff;
     --bor_Color : #ffffff;
     --bor_Radius : 25px;
-    --btn_color : #035188;
-    --btn_special : #1335f4;
-    --btn_contnet_color : #fff;
-
-    --muted_1 : #0bdbc6;
+    --btn_color : #d4d8db;
+    
+    --btn_contnet_color : #030303;
+    --muted_1 : #727575;
     --muted_1_weight : 400;
-        --Result : #fbf6f6;
-        --Result_font_size : 36px;
-        --muted_font_size : 20px;
-        --Result_weight : 700;
-        --HoverColor : #1062fc;
+        --check-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>');
+  --dot-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="white"/></svg>');
 }
 
 body {
@@ -31,32 +27,41 @@ color:white;
     justify-content: center;
     align-items: center;
 }
+
+.cb-4, .rd-4{ border-color:#22d3ee; box-shadow:0 0 12px rgba(34,211,238,.35) }
+.cb-4:checked, .rd-4:checked{ background:#22d3ee; background-image:var(--check-svg); background-position:center; background-repeat:no-repeat }
+.rd-4:checked{ background-image:var(--dot-svg) }
 .wrap {
     display: block;
-    width : 700px
+    width : 75%;
+        background-color: var(--bg_container);
+        padding : 1.3rem;
+            border: 2px solid var(--muted_1);
+                border-radius: var(--bor_Radius);
+                margin-top: 50px;
+
 }
 
 .Container {
-    display: flex;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     border: 2px solid var(--muted_1);
     border-radius: var(--bor_Radius);
-    flex-direction: column;
-    gap:1.2rem;
-    padding: 45px;
-    margin-top: 25px;
-        margin-bottom: 25px;
-        flex-wrap: wrap;
+    background-color: var(--bg_container);
+    gap:1.5rem;
             background-blend-mode: multiply; 
 }
 p{
     font-weight: 400;
 }
+.control{ display:flex; align-items:center; gap:10px }
+.control label{ cursor:pointer }
+
 .Buttons_Container {
         position: relative;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid var(--muted_1);
-    border-radius: var(--bor_Radius);
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -64,4 +69,70 @@ p{
     padding: 45px;
     margin-top: 15px;
   width: 100%;
+}
+.Choices {
+    padding-top:25px;
+        padding-bottom:25px;
+
+        position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:0.2rem;
+  width: 100%;
+}
+.Choices p {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin: 5px;
+}
+.Choices_toppings {
+ padding-top:25px;
+        padding-bottom:25px;
+
+        position: relative;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3,1fr);
+    gap:0.2rem;
+  width: 100%;
+}
+.Choices_toppings p {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin: 5px;
+}
+button {
+    position: relative;
+    padding : 1.6rem 1.3rem ;
+    background-color: var(--btn_color);
+    font-size: 15px;
+    font-weight: bold;
+border: 1px solid var(--muted_1);
+    border-radius: var(--bor_Radius);
+    color : var(--btn_contnet_color);
+}
+button:hover {
+    background-color:  #050505;
+    color:white;
+    transform: translateY(-10px);
+    transition: ease-in;
+    box-shadow: 0 4px 12px rgba(248, 246, 246, 0.751);
+    border-color: var(--muted_1, #888);
+}
+
+.Recipe {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 2px solid var(--muted_1);
+    border-radius: var(--bor_Radius);
+    background-color: var(--bg_container);
+    gap:1.5rem;
+            background-blend-mode: multiply; 
+            margin-top: 20px;
 }

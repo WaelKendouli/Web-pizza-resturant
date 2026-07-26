@@ -1,3 +1,22 @@
+
+:root {
+    --bg_container : hsla(240, 91%, 13%, 0.5);
+    --white : #fff;
+    --bor_Color : #ffffff;
+    --bor_Radius : 25px;
+    --btn_color : #035188;
+    --btn_special : #1335f4;
+    --btn_contnet_color : #fff;
+
+    --muted_1 : #0bdbc6;
+    --muted_1_weight : 400;
+        --Result : #fbf6f6;
+        --Result_font_size : 36px;
+        --muted_font_size : 20px;
+        --Result_weight : 700;
+        --HoverColor : #1062fc;
+}
+
 body {
     background-color: hsla(0, 0%, 8%, 0.5);
 background-image: url('Resource/res2.jpg');
@@ -5,4 +24,44 @@ background-repeat: no-repeat;
 background-size: cover;
 color:white;
     background-blend-mode: multiply; 
+    display: flex;
+    box-sizing: border-box;
+    min-width: 900px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+.wrap {
+    display: block;
+    width : 700px
+}
+
+.Container {
+    display: flex;
+    border: 2px solid var(--muted_1);
+    border-radius: var(--bor_Radius);
+    flex-direction: column;
+    gap:1.2rem;
+    padding: 45px;
+    margin-top: 25px;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+            background-blend-mode: multiply; 
+}
+p{
+    font-weight: 400;
+}
+.Buttons_Container {
+        position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--muted_1);
+    border-radius: var(--bor_Radius);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:0.8rem;
+    padding: 45px;
+    margin-top: 15px;
+  width: 100%;
 }

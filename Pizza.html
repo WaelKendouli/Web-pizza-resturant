@@ -4,10 +4,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="PizzaTheme.css">
+	<script src="PizzaLogic.js" defer></script>
 	<title>Basic Page</title>
 </head>
 <body>
 	<div class="wrap">
+		<div class="price">
+		<p>Total Price : </p>
+		<p id="lbTotalPrice">0 $</p>
+		</div>
 		<h1>Make your Pizza :</h1>
 		<div class="Container">
 			
@@ -15,15 +20,15 @@
 			<div class="Choices">
 				<p>Size : </p>
 				<div class="control">
-					<input id="sizeLarge" name="size" type="radio" class="rd-4" />
+					<input id="rbSizeLarge" data-size="Large" data-price="50" name="size" type="radio" class="rd-4" />
 					<label for="sizeLarge">Large</label>
 				</div>
 				<div class="control">
-					<input id="sizeMedium" name="size" type="radio" class="rd-4" />
+					<input id="rdSizeMedium" data-size="Medium" data-price="20" name="size" type="radio" class="rd-4" />
 					<label for="sizeMedium">Medium</label>
 				</div>
 				<div class="control">
-					<input id="sizeSmall" name="size" type="radio" class="rd-4" />
+					<input id="rbSizeSmall"  data-size="Small" data-price="10" name="size" type="radio" class="rd-4" />
 					<label for="sizeSmall">Small</label>
 				</div>
 			</div>
@@ -32,53 +37,51 @@
 			<div class="Choices_toppings">
 				<p>Topping : </p>
 				<div class="control">
-					<input id="topping1" type="checkbox" class="cb-4" />
+					<input id="Pepperoni" data-price="5" type="checkbox" class="cb-4" />
 					<label for="topping1">Pepperoni</label>
 				</div>
 				<div class="control">
-					<input id="topping2" type="checkbox" class="cb-4" />
+					<input id="Mushrooms" data-price="5" type="checkbox" class="cb-4" />
 					<label for="topping2">Mushrooms</label>
 				</div>
 				<div class="control">
-					<input id="topping3" type="checkbox" class="cb-4" />
+					<input id="Onions" data-price="5" type="checkbox" class="cb-4" />
 					<label for="topping3">Onions</label>
 				</div>
 				<div class="control">
-					<input id="topping4" type="checkbox" class="cb-4" />
+					<input id="Sausage" data-price="5" type="checkbox" class="cb-4" />
 					<label for="topping4">Sausage</label>
 				</div>
 				<div class="control">
-					<input id="topping5" type="checkbox" class="cb-4" />
+					<input id="Bacon" data-price="5" type="checkbox" class="cb-4" />
 					<label for="topping5">Bacon</label>
 				</div>
 				<div class="control">
-					<input id="topping6" type="checkbox" class="cb-4" />
+					<input id="cheese" data-price="5" type="checkbox" class="cb-4" />
 					<label for="topping6">Extra cheese</label>
 				</div>
 			</div>
 
-			<!-- Crust Type group - all have name="crust" -->
 			<div class="Choices">
 				<p>Crust Type : </p>
 				<div class="control">
-					<input id="crustThin" name="crust" type="radio" class="rd-4" />
+					<input id="crustThin" data-thicknes="Thin" name="crust" data-price="0" type="radio" class="rd-4" />
 					<label for="crustThin">Thin</label>
 				</div>
 				<div class="control">
-					<input id="crustThick" name="crust" type="radio" class="rd-4" />
+					<input id="crustThick" data-thicknes="Thick" name="crust" data-price="5" type="radio" class="rd-4" />
 					<label for="crustThick">Thick</label>
 				</div>
 			</div>
 
-			<!-- Where to eat group - all have name="location" -->
 			<div class="Choices">
 				<p>Where to eat : </p>
 				<div class="control">
-					<input id="locationEatIn" name="location" type="radio" class="rd-4" />
+					<input id="locationEatIn" data-location="In" name="location" type="radio" class="rd-4" />
 					<label for="locationEatIn">Eat in</label>
 				</div>
 				<div class="control">
-					<input id="locationTakeOut" name="location" type="radio" class="rd-4" />
+					<input id="locationTakeOut" data-location="Out" name="location" type="radio" class="rd-4" />
 					<label for="locationTakeOut">Take out</label>
 				</div>
 			</div>
@@ -103,10 +106,7 @@
 				<p id="lbEat">[????]</p>
 			</div>
 		</div>
-		<div class="price">
-		<p>Total Price : </p>
-		<p>[????]</p>
-		</div>
+		
 		<div class="Buttons_Container">
 			<button>Order Pizza</button>
 			<button>Reset form</button>

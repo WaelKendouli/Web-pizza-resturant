@@ -181,6 +181,9 @@ padding: 20px;
 
 @media screen and  (max-width:900px) {
   /* CSS rules go here */
+.wrap {
+    width: 90%;
+}
   .Container {
     grid-template-columns: repeat(1,1fr);
   }

@@ -15,14 +15,14 @@
 
 body {
     background-color: hsla(0, 0%, 8%, 0.5);
-background-image: url('Resource/res2.jpg');
+background-image: url('Resource/pizza.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 color:white;
     background-blend-mode: multiply; 
     display: flex;
     box-sizing: border-box;
-    min-width: 900px;
+    min-width: 300px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@ color:white;
         padding : 1.3rem;
             border: 2px solid var(--muted_1);
                 border-radius: var(--bor_Radius);
-                margin-top: 50px;
+                margin-top: 20px;
 
 }
 
@@ -66,8 +66,7 @@ p{
     align-items: center;
     justify-content: center;
     gap:0.8rem;
-    padding: 45px;
-    margin-top: 15px;
+    margin-top: 45px;
   width: 100%;
 }
 .Choices {
@@ -127,12 +126,47 @@ button:hover {
 
 .Recipe {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    flex-direction: row;
     border: 2px solid var(--muted_1);
     border-radius: var(--bor_Radius);
-    background-color: var(--bg_container);
+   /* background-color: var(--bg_container);*/
     gap:1.5rem;
             background-blend-mode: multiply; 
-            margin-top: 20px;
+            margin-block: 20px;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+
+}
+
+.Cell {
+    display: flex;
+    padding-inline: 15px;
+    padding-block: 15px;
+    flex-wrap: wrap;
+    margin-block: 15px;
+    margin-left: 15px;
+}
+.Cell p {
+    font-weight: 700;
+    font-size: 17px;
+    padding-inline: 10px;
+}
+ .price {
+    position: relative;
+    display: flex;
+    font-weight: 700;
+    font-size: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    align-items: center;
+        border: 1px solid var(--muted_1);
+    border-radius: var(--bor_Radius)
+}
+.price p {
+padding: 20px;
+
 }

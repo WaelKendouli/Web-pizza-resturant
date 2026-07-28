@@ -124,7 +124,13 @@ button:hover {
     box-shadow: 0 4px 12px rgba(248, 246, 246, 0.751);
     border-color: var(--muted_1, #888);
 }
-
+button:active {
+    background-color:  #0c0c0c;
+    color:white;
+    transform: scale(0.9);
+    box-shadow: 0 4px 12px rgba(248, 246, 246, 0.751);
+    border-color: var(--muted_1, #888);
+}
 .Recipe {
     position: relative;
     display: flex;
@@ -187,3 +193,40 @@ padding: 20px;
     font-size: 30px;
   }
 }
+@media print  {
+    
+ body {
+    background-image: none;
+    color:black;
+ }
+  .Container {
+    display: none;
+  }
+  .Buttons_Container {
+    display: none;
+  }
+  .Recipe {
+    flex-direction: column;
+    margin-block: 5px;
+   
+  }
+  .Cell  p{
+ font-size: 25px;  
+}
+  .Cell {
+    margin: 0;
+    padding-block: 5px;
+  }
+  .price
+  {
+    margin: 24px;
+  }
+  .price p {
+padding: 20px;
+font-weight: bold;
+font-size: 30px;
+color: darkgreen;
+}
+
+}
+

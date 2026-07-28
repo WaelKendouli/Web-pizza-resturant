@@ -28,7 +28,7 @@ color:white;
     align-items: center;
 }
 
-.cb-4, .rd-4{ border-color:#22d3ee; box-shadow:0 0 12px rgba(34,211,238,.35) }
+.cb-4, .rd-4{    border-color:#22d3ee; box-shadow:0 0 12px rgba(34,211,238,.35) }
 .cb-4:checked, .rd-4:checked{ background:#22d3ee; background-image:var(--check-svg); background-position:center; background-repeat:no-repeat }
 .rd-4:checked{ background-image:var(--dot-svg) }
 .wrap {
@@ -55,7 +55,7 @@ color:white;
 p{
     font-weight: 400;
 }
-.control{ display:flex; align-items:center; gap:10px }
+.control{ display:flex; font-size: 18px; align-items:center; gap:10px }
 .control label{ cursor:pointer }
 
 .Buttons_Container {
@@ -83,19 +83,20 @@ p{
   width: 100%;
 }
 .Choices p {
-    font-size: 18px;
+    font-size: 23px;
     font-weight: bold;
     padding-left: 10px;
     margin: 5px;
 }
+
 .Choices_toppings {
  padding-top:25px;
         padding-bottom:25px;
 
         position: relative;
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(3,1fr);
+    flex-wrap: row;
     gap:0.2rem;
   width: 100%;
 }
@@ -103,7 +104,7 @@ p{
     font-size: 18px;
     font-weight: bold;
     padding-left: 10px;
-    margin: 5px;
+    margin: 15px;
 }
 button {
     position: relative;

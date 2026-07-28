@@ -51,6 +51,7 @@ color:white;
     background-color: var(--bg_container);
     gap:1.5rem;
             background-blend-mode: multiply; 
+            padding: 25px;
 }
 p{
     font-weight: 400;
@@ -92,8 +93,7 @@ p{
 .Choices_toppings {
  padding-top:25px;
         padding-bottom:25px;
-
-        position: relative;
+                position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-wrap: row;
@@ -146,6 +146,7 @@ button:hover {
     padding-inline: 15px;
     padding-block: 15px;
     flex-wrap: wrap;
+    
     margin-block: 15px;
     margin-left: 15px;
 }
@@ -170,4 +171,19 @@ button:hover {
 .price p {
 padding: 20px;
 
+}
+
+@media screen and  (max-width:900px) {
+  /* CSS rules go here */
+  .Container {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .Choices_toppings {
+   flex-direction: column;
+      justify-content: center;
+    align-items: center;
+  }
+  .Cell p{
+    font-size: 30px;
+  }
 }

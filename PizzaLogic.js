@@ -9,6 +9,35 @@ const rbThin = document.getElementById("crustThin");
 const rbEatin = document.getElementById("locationEatIn");
 const rbEatOut = document.getElementById("locationTakeOut");
 const lbLocation = document.getElementById("lbEat");
+const lbToppings = document.getElementById("lbTopping");
+
+const ckPepperoni = document.getElementById("ckPepperoni");
+const ckMushrooms = document.getElementById("ckMushrooms");
+const ckOnions = document.getElementById("ckOnions");
+const ckSausage = document.getElementById("ckSausage");
+const ckBacon = document.getElementById("ckBacon");
+const ckCheese = document.getElementById("ckCheese");
+
+let Toppings = "";
+
+function AddToppings(element)
+{
+    if (!element.hasAttribute("data-topping")) {
+        return ;
+    }
+    let current = "";
+    if(element.checked===true)
+        {
+         Toppings += element.dataset.topping + " ";
+        }
+        else 
+        {
+     Toppings =  Toppings.replace(element.dataset.topping + " " , "");
+        }
+    lbToppings.textContent = Toppings;
+}
+
+
 function UpdateTotalPriceForSelectingSize(element)
 {
     if (element.checked===true) 
@@ -44,3 +73,10 @@ rbEatin.addEventListener("change" ,
     function() {UpdateLabelUI(this , "data-location" , this.dataset.location , lbLocation)});
 rbEatOut.addEventListener("change" , 
     function() {UpdateLabelUI(this , "data-location" , this.dataset.location , lbLocation)});
+
+    ckPepperoni.addEventListener("change" , function() { AddToppings(this); });
+    ckMushrooms.addEventListener("change" , function() { AddToppings(this); });
+    ckOnions.addEventListener("change" , function() { AddToppings(this); });
+    ckSausage.addEventListener("change" , function() { AddToppings(this); });
+    ckBacon.addEventListener("change" , function() { AddToppings(this); });
+    ckCheese.addEventListener("change" , function() { AddToppings(this); });

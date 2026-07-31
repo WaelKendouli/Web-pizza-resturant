@@ -20,15 +20,15 @@
 			<div class="Choices">
 				<p>Size : </p>
 				<div class="control">
-					<input id="rbSizeLarge" data-size="Large" data-price="50" name="size" type="radio" class="rd-4" />
+					<input id="rbSizeLarge" data-size="Large" data-price="50" name="size" type="radio" class="rd-4" data-checked_before="no" />
 					<label for="sizeLarge">Large</label>
 				</div>
 				<div class="control">
-					<input id="rdSizeMedium" data-size="Medium" data-price="20" name="size" type="radio" class="rd-4" />
+					<input id="rdSizeMedium" data-size="Medium" data-price="20" name="size" type="radio" class="rd-4" data-checked_before="no" />
 					<label for="sizeMedium">Medium</label>
 				</div>
 				<div class="control">
-					<input id="rbSizeSmall"  data-size="Small" data-price="10" name="size" type="radio" class="rd-4" />
+					<input id="rbSizeSmall"  data-size="Small" data-price="10" name="size" type="radio" class="rd-4" data-checked_before="no" />
 					<label for="sizeSmall">Small</label>
 				</div>
 			</div>
@@ -37,27 +37,27 @@
 			<div class="Choices_toppings">
 				<p>Topping : </p>
 				<div class="control">
-					<input id="ckPepperoni" data-topping="Pepperoni" data-price="5" type="checkbox" class="cb-4" />
+					<input id="ckPepperoni" data-topping="Pepperoni" data-price="5" type="checkbox" class="cb-4" data-checked_before="no" />
 					<label for="topping1">Pepperoni</label>
 				</div>
 				<div class="control">
-					<input id="ckMushrooms" data-topping="Mushrooms" data-price="5" type="checkbox" class="cb-4" />
+					<input id="ckMushrooms" data-topping="Mushrooms" data-price="5" type="checkbox" class="cb-4" data-checked_before="no" />
 					<label for="topping2">Mushrooms</label>
 				</div>
 				<div class="control">
-					<input id="ckOnions" data-topping="Onions" data-price="5" type="checkbox" class="cb-4" />
+					<input id="ckOnions" data-topping="Onions" data-price="5" type="checkbox" class="cb-4" data-checked_before="no" />
 					<label for="topping3">Onions</label>
 				</div>
 				<div class="control">
-					<input id="ckSausage" data-topping="Sausage" data-price="5" type="checkbox" class="cb-4" />
+					<input id="ckSausage" data-topping="Sausage" data-price="5" type="checkbox" class="cb-4" data-checked_before="no" />
 					<label for="topping4">Sausage</label>
 				</div>
 				<div class="control">
-					<input id="ckBacon" data-topping="Bacon" data-price="5" type="checkbox" class="cb-4" />
+					<input id="ckBacon" data-topping="Bacon" data-price="5" type="checkbox" class="cb-4" data-checked_before="no" />
 					<label for="topping5">Bacon</label>
 				</div>
 				<div class="control">
-					<input id="ckCheese" data-topping="Cheese" data-price="5" type="checkbox" class="cb-4" />
+					<input id="ckCheese" data-topping="Cheese" data-price="5" type="checkbox" class="cb-4" data-checked_before="no" />
 					<label for="topping6">Extra cheese</label>
 				</div>
 			</div>
@@ -65,11 +65,11 @@
 			<div class="Choices">
 				<p>Crust Type : </p>
 				<div class="control">
-					<input id="crustThin" data-thicknes="Thin" name="crust" data-price="0" type="radio" class="rd-4" />
+					<input id="crustThin" data-thicknes="Thin" name="crust" data-price="0" type="radio" class="rd-4" data-checked_before="no" />
 					<label for="crustThin">Thin</label>
 				</div>
 				<div class="control">
-					<input id="crustThick" data-thicknes="Thick" name="crust" data-price="5" type="radio" class="rd-4" />
+					<input id="crustThick" data-thicknes="Thick" name="crust" data-price="5" type="radio" class="rd-4" data-checked_before="no" />
 					<label for="crustThick">Thick</label>
 				</div>
 			</div>
@@ -77,11 +77,11 @@
 			<div class="Choices">
 				<p>Where to eat : </p>
 				<div class="control">
-					<input id="locationEatIn" data-location="In" name="location" type="radio" class="rd-4" />
+					<input id="locationEatIn" data-location="In" name="location" type="radio" class="rd-4" data-checked_before="no" />
 					<label for="locationEatIn">Eat in</label>
 				</div>
 				<div class="control">
-					<input id="locationTakeOut" data-location="Out" name="location" type="radio" class="rd-4" />
+					<input id="locationTakeOut" data-location="Out" name="location" type="radio" class="rd-4" data-checked_before="no" />
 					<label for="locationTakeOut">Take out</label>
 				</div>
 			</div>
@@ -108,8 +108,8 @@
 		</div>
 		
 		<div class="Buttons_Container">
-			<button>Order Pizza</button>
-			<button>Reset form</button>
+			<button id="btnOrder">Order Pizza</button>
+			<button id="btnReset">Reset form</button>
 		</div>
 	</div>
 </body>
